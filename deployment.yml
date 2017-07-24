@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: node-hello
+  name: php-hello
   labels:
     #Project ID
     app: directed-cove-135122
@@ -15,9 +15,9 @@ spec:
     spec:
       #Container details
       containers:
-        - name: cluster-rts
-          image: us.gcr.io/directed-cove-135122/node:v3
+        - name: smbdiy-cluster
+          image: us.gcr.io/directed-cove-135122/php:v1
           imagePullPolicy: Always
           #Ports to expose
           ports:
-          - containerPort: 8080
+          - containerPort: 80
