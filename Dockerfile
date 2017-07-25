@@ -6,3 +6,5 @@ RUN a2enmod rewrite
 ADD . /var/www
 ADD ./public /var/www/html
 
+chown -R www-data:www-data /var/www/html \
+chmod -R 777 /var/www
